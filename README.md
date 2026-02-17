@@ -17,8 +17,8 @@ The goal of this project is to build a:
 - With a built-in console inside the GUI to track and manage the application
 
 This project is developed purely for learning purposes and curiosity — no commercial or any harmfull use intended. <br>
-This is purely out of ## **curiosity** and ## **fun at coding** and why not? <br>
-Insiparion will come from wireShark but not planned to support ## **any** exploits!!!
+This is purely out of ##**curiosity** and ##**fun at coding** and why not? <br>
+Insiparion will come from wireShark but not planned to support ##**any** exploits!!!
 
 ---
 
@@ -74,7 +74,7 @@ This tool is being developed strictly for:
 - Personal lab testing
 - Learning networking concepts
 
-This is not planned to be used as any ## **HARMFULL TOOL**, not under ## **any** circumstances!!!
+This is not planned to be used as any ##**HARMFULL TOOL**, not under ##**any** circumstances!!!
 
 ---
 
