@@ -34,25 +34,25 @@ Insiparion will come from wireShark but not planned to support **any** exploits!
 ## 🚀 Planned Features
 
 ### Core Features
-- [ ] TCP connect port scanning
-- [ ] Custom IP address input
-- [ ] Custom port range selection
-- [ ] Timeout configuration
-- [ ] Multi-threaded scanning
-- [ ] Adjustable thread limit
-- [ ] Scan progress indicator
+- TCP connect port scanning
+- Custom IP address input
+- Custom port range selection
+- Timeout configuration
+- Multi-threaded scanning
+- Adjustable thread limit
+- Scan progress indicator
 
 ### Network Features
-- [ ] Local subnet detection
-- [ ] Host discovery (ping or TCP check)
-- [ ] Scan multiple devices in subnet
-- [ ] Common ports quick-scan mode
-- [ ] Full range scan option (1–65535)
+- Local subnet detection
+- Host discovery (ping or TCP check)
+- Scan multiple devices in subnet
+- Common ports quick-scan mode
+- Full range scan option (1–65535)
 
 ### GUI Features
-- [ ] Modern Qt interface
-- [ ] Built-in console/log window
-- [ ] Real-time scan results table
+- Modern Qt interface
+- Built-in console/log window
+- Real-time scan results table
 
 ---
 
