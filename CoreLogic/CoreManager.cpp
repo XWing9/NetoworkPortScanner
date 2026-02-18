@@ -1,4 +1,9 @@
-//
-// Created by XWing on 18.02.2026.
-//
-#include "CoreManager.h"
+
+#include "../GUI/GUIManager.cpp"
+
+GUIManager::GUIManager(QWidget *parent)
+    : QMainWindow(parent)
+{
+    setWindowTitle("My App");
+    resize(800, 600);
+}
