@@ -1,15 +1,14 @@
 #include "GUIManager.h"
 
-#ifdenf GUIMANAGER_H
-#define GUIMANAGER_H
+GUIManager::GUIManager() {}
 
-#include <QMainWindow>
+GUIManager::~GUIManager() {}
 
-class GUIManager : public QMainWindow {
-    Q_OBJECT;
-
-public:
-    GUIManager(QWidget *parent = nullptr);
-};
-
-#endif
+void GUIManager::render() {
+    ImGui::Begin("Network Port Scanner");
+    ImGui::Text("Welcome to the Network Port Scanner.");
+    if (ImGui::Button("Start Scan")) {
+        // Logic for starting a scan
+    }
+    ImGui::End();
+}

@@ -3,7 +3,7 @@
 ⚠️ **Status: Early Development**
 
 This project is currently in its very early stage.  
-At the moment, the repository only contains two empty source files and serves as a starting point for development.
+At the moment, the repository only contains files to create a small window through imGUI.
 
 ---
 
@@ -17,11 +17,10 @@ The goal of this project is to build a:
 - With a built-in console inside the GUI to track and manage the application
 
 This project is developed purely for learning purposes and curiosity — no commercial or any harmfull use intended. <br>
-This is purely out of # **curiosity** and # **fun at coding** and why not? <br>
+This is purely out of **curiosity** and **fun at coding** and why not? <br>
 Insiparion will come from wireShark but not planned to support ## **any** exploits!!!
 
 ---
-
 ## 🛠 Tech Stack
 
 - **Language:** C++
