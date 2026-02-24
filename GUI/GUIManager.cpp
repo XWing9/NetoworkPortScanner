@@ -42,22 +42,33 @@ void GUIManager::newFrame() {
     ImGui::NewFrame();
 }
 
+//main part where GUI is defined
 void GUIManager::render() {
     // Main window
-
     ImGui::Begin("Welcome");
     ImGui::Text("Network Port Scanner is running!");
     ImGui::Separator();
 
     ImGui::ColorEdit4("Clear Color", clearColor);
+    if (ImGui::Button(coreManager.getStatusText().c_str()))
+    {
+        ImGui::Begin("Tracking");  // New window with the name "Tracking"
+        ImGui::Text("Button clicked!");
+        ImGui::End();  // Make sure to call ImGui::End() to close the new window
+    }
 
     if (ImGui::Button("Quit")) {
         glfwSetWindowShouldClose(window, true);
     }
 
     ImGui::Separator();
+    ImGui::End();  // Close the original window
 
-    ImGui::End();
+    // New window example
+    ImGui::Begin("New Window");  // Create a second window
+    ImGui::Text("This is a new window!");
+    ImGui::Button("Click Me");
+    ImGui::End();  // Close the new window
 }
 
 void GUIManager::endFrame() {

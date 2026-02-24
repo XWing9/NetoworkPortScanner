@@ -33,7 +33,7 @@ FetchContent_MakeAvailable(glfw)
 find_package(OpenGL REQUIRED)
 
 # Create executable
-add_executable(NetworkPortScanner ${SOURCES})
+add_executable(NetworkPortScanner WIN32 ${SOURCES})
 
 # Include directories
 target_include_directories(NetworkPortScanner PRIVATE

@@ -24,7 +24,7 @@ int main()
         return 1;
     }
     glfwMakeContextCurrent(window);
-    glfwSwapInterval(1); // Enable VSync
+    glfwSwapInterval(0); // Enable VSync
 
     // 3. Create and initialize GUIManager
     GUIManager guiManager;
@@ -37,8 +37,16 @@ int main()
     }
 
     // 4. Main Loop
+
+    double lastFrameTime = glfwGetTime();
+
     while (!glfwWindowShouldClose(window))
     {
+        double currentTime = glfwGetTime();
+        double deltaTime = currentTime - lastFrameTime;
+
+        lastFrameTime = currentTime;
+
         glfwPollEvents();
 
         // Use GUIManager for all GUI operations
