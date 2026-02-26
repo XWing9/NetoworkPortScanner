@@ -3,6 +3,7 @@
 
 #include "../imGUI/frontend/imgui.h"
 #include "../CoreLogic/CoreManager.h"
+#include "../GUI\GUIGeneration.h"
 #include <GLFW/glfw3.h>
 
 class GUIManager {
@@ -25,6 +26,7 @@ private:
     float clearColor[4];
 
     CoreManager coreManager;
+    GUIGeneration GUIGen;
     bool showLabel = false;
 };
 

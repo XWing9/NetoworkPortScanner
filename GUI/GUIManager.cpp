@@ -49,13 +49,9 @@ void GUIManager::render() {
     ImGui::Text("Network Port Scanner is running!");
     ImGui::Separator();
 
+    //GUIGen.genanotherWindow(clearColor[0], clearColor[1], clearColor[2], clearColor[3],window);
+
     ImGui::ColorEdit4("Clear Color", clearColor);
-    if (ImGui::Button(coreManager.getStatusText().c_str()))
-    {
-        ImGui::Begin("Tracking");  // New window with the name "Tracking"
-        ImGui::Text("Button clicked!");
-        ImGui::End();  // Make sure to call ImGui::End() to close the new window
-    }
 
     if (ImGui::Button("Quit")) {
         glfwSetWindowShouldClose(window, true);
@@ -64,11 +60,7 @@ void GUIManager::render() {
     ImGui::Separator();
     ImGui::End();  // Close the original window
 
-    // New window example
-    ImGui::Begin("New Window");  // Create a second window
-    ImGui::Text("This is a new window!");
-    ImGui::Button("Click Me");
-    ImGui::End();  // Close the new window
+    GUIGen.genTrackingWindow();
 }
 
 void GUIManager::endFrame() {
