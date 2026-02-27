@@ -61,6 +61,7 @@ void GUIManager::render() {
     ImGui::End();  // Close the original window
 
     GUIGen.genTrackingWindow();
+    GUIGen.generateTable();
 }
 
 void GUIManager::endFrame() {

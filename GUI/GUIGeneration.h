@@ -11,7 +11,10 @@ class GUIGeneration
         void genTrackingWindow();
 
         void genanotherWindow();
+
         void genanotherWindow(float x, float x1, float x2, float x3, GLFWwindow* window);
+
+        void generateTable();
 };
 
 #endif //NETWORKPORTSCANNER_GUIGENERATION_H
