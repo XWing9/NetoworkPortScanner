@@ -2,8 +2,14 @@
 #include <GLFW/glfw3.h>
 #include "GUI/GUIManager.h"
 
-int main()
-{
+extern int windowWidth;
+extern int windowHeight;
+
+int main(){
+
+    int windowW = windowWidth;
+    int windowH = windowHeight;
+
     // 1. Initialize GLFW
     if (!glfwInit())
     {
@@ -17,6 +23,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     GLFWwindow* window = glfwCreateWindow(1280, 720, "Network Port Scanner", nullptr, nullptr);
+
     if (!window)
     {
         std::cerr << "Failed to create GLFW window" << std::endl;

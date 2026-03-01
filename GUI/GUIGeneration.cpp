@@ -3,14 +3,23 @@
 #include "../imGUI/backend/imgui_impl_opengl3.h"
 #include <GL/gl.h>
 
+//constructor
 GUIGeneration::GUIGeneration(){
     return;
 }
 
 void GUIGeneration::genTrackingWindow(){
-    ImGui::SetNextWindowPos(ImVec2(100, 300));
-    ImGui::Begin("Tracking Window");  // New window with the name "Tracking"
-    ImGui::Text("Button clicked!");
+    ImGui::SetNextWindowPos(ImVec2(0, 0));
+    ImGui::SetNextWindowSize(ImVec2(200, 100));
+
+    ImGuiWindowFlags flags =
+        ImGuiWindowFlags_NoMove        |  // Can't be dragged
+        ImGuiWindowFlags_NoResize      |  // Can't be resized
+        ImGuiWindowFlags_NoCollapse    |  // Can't be collapsed/hidden
+        ImGuiWindowFlags_NoTitleBar;  // Removes title bar entirely
+
+    ImGui::Begin("Tracking Window",nullptr,flags);  // New window with the name "Tracking"
+    ImGui::Text("window");
     ImGui::End();
 };
 

@@ -24,6 +24,8 @@ public:
 private:
     GLFWwindow* window;
     float clearColor[4];
+    int windowWidth;
+    int windowHeight;
 
     CoreManager coreManager;
     GUIGeneration GUIGen;

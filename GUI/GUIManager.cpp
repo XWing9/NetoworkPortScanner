@@ -4,6 +4,11 @@
 #include <iostream>
 #include <GL/gl.h>
 
+#include "imgui_internal.h"
+
+int windowWidth = 1280;
+int windowHeight = 720;
+
 GUIManager::GUIManager() : window(nullptr) {
     clearColor[0] = 0.2f;
     clearColor[1] = 0.3f;
@@ -82,6 +87,6 @@ void GUIManager::shutdown() {
     if (window) {
         ImGui_ImplOpenGL3_Shutdown();
         ImGui_ImplGlfw_Shutdown();
-        ImGui::DestroyContext();
+        ImGui::Shutdown();
     }
 }
