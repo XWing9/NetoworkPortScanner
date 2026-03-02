@@ -13,19 +13,19 @@ The goal of this project is to build a:
 
 - GUI-based TCP network scanner
 - Fully written in modern C++
-- Using Qt for the graphical interface
+- Using ImGUI for the graphical interface
 - With a built-in console inside the GUI to track and manage the application
 
 This project is developed purely for learning purposes and curiosity — no commercial or any harmfull use intended. <br>
-This is purely out of **curiosity** and **fun at coding** and why not? <br>
-Insiparion will come from wireShark but not planned to support ## **any** exploits!!!
+This is purely out of **curiosity** and **fun at coding**, and why not? <br>
+Insiparion will comes from wireShark but not planned to support **any** exploits!!!
 
 ---
 ## 🛠 Tech Stack
 
 - **Language:** C++
-- **GUI Framework:** Qt
-- **Build System:** (planned) CMake / Qt Creator
+- **GUI Framework:** ImGUI
+- **Build System:** (planned) CMake / ImGUI
 - **Platform:** Windows (initial target, cross-platform possible)
 
 ---
@@ -49,7 +49,7 @@ Insiparion will come from wireShark but not planned to support ## **any** exploi
 - Full range scan option (1–65535)
 
 ### GUI Features
-- Modern Qt interface
+- Modern ImGUI interface
 - Built-in console/log window
 - Real-time scan results table
 
@@ -59,9 +59,10 @@ Insiparion will come from wireShark but not planned to support ## **any** exploi
 
 This project focuses on improving knowledge in:
 
-- To learn more about networks and how they work
+- Learning more about networks and how they work
+- How to use more low level Languages
 - Multi-threading in C++ as a possibility
-- GUI development with Qt
+- GUI development with ImGUI
 
 ---
 
@@ -73,7 +74,7 @@ This tool is being developed strictly for:
 - Personal lab testing
 - Learning networking concepts
 
-This is not planned to be used as any ##**HARMFULL TOOL**, not under ##**any** circumstances!!!
+This is not planned to be used as any **HARMFULL TOOL**, not under **any** circumstances!!!
 
 ---
 
@@ -81,6 +82,6 @@ This is not planned to be used as any ##**HARMFULL TOOL**, not under ##**any** c
 
 Current state:
 
-- Repository initialized
 - Base structure created
 - Development just starting
+- Creating GUI and starting development on features
