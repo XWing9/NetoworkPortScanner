@@ -63,9 +63,9 @@
     <list default="true" id="52376b4c-bcb5-4f58-a7b4-c2f7e6ae0a0d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/GUIGeneration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIGeneration.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/GUIGeneration.h" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIGeneration.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/GUIManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/GUIManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,6 +353,7 @@
       <workItem from="1772208485157" duration="597000" />
       <workItem from="1772280825689" duration="2502000" />
       <workItem from="1772384688248" duration="3221000" />
+      <workItem from="1772529279200" duration="1984000" />
     </task>
     <servers />
   </component>

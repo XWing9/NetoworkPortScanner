@@ -8,7 +8,7 @@ class GUIGeneration
     public:
         GUIGeneration();
 
-        void genTrackingWindow();
+        void genTrackingWindow(int windowWidth, int windowHeight);
 
         void genanotherWindow();
 

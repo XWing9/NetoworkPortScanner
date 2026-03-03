@@ -8,9 +8,9 @@ GUIGeneration::GUIGeneration(){
     return;
 }
 
-void GUIGeneration::genTrackingWindow(){
+void GUIGeneration::genTrackingWindow(int windowWidth,int windowHeight){
     ImGui::SetNextWindowPos(ImVec2(0, 0));
-    ImGui::SetNextWindowSize(ImVec2(200, 100));
+    ImGui::SetNextWindowSize(ImVec2(windowWidth, 100));
 
     ImGuiWindowFlags flags =
         ImGuiWindowFlags_NoMove        |  // Can't be dragged

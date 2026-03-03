@@ -18,7 +18,7 @@ The goal of this project is to build a:
 
 This project is developed purely for learning purposes and curiosity — no commercial or any harmfull use intended. <br>
 This is purely out of **curiosity** and **fun at coding**, and why not? <br>
-Insiparion will comes from wireShark but not planned to support **any** exploits!!!
+Insiparion comes from wireShark, but not intended to support **any** exploits!!!
 
 ---
 ## 🛠 Tech Stack
@@ -83,5 +83,6 @@ This is not planned to be used as any **HARMFULL TOOL**, not under **any** circu
 Current state:
 
 - Base structure created
-- Development just starting
-- Creating GUI and starting development on features
+- Development just started
+- Creating GUI
+- Starting development on core features
