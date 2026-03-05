@@ -61,11 +61,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52376b4c-bcb5-4f58-a7b4-c2f7e6ae0a0d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/appConfig.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreLogic/CoreManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CoreLogic/CoreManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreLogic/CoreManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/CoreLogic/CoreManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/GUIGeneration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIGeneration.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/GUIGeneration.h" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIGeneration.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/GUIManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/GUIManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,12 +134,17 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="CMake Application.NetworkPortScanner">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NetworkPortScanner" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="NetworkPortScanner" TARGET_NAME="NetworkPortScanner" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="NetworkPortScanner" RUN_TARGET_NAME="NetworkPortScanner">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -354,6 +364,7 @@
       <workItem from="1772280825689" duration="2502000" />
       <workItem from="1772384688248" duration="3221000" />
       <workItem from="1772529279200" duration="1984000" />
+      <workItem from="1772727255854" duration="7406000" />
     </task>
     <servers />
   </component>

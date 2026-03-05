@@ -20,6 +20,7 @@ set(SOURCES
     imGUI/backend/imgui_impl_opengl3.cpp
     GUI/GUIGeneration.cpp
     GUI/GUIGeneration.h
+        appConfig.h
 )
 
 # Fetch GLFW for window management (only external fetch allowed for backend compatibility)

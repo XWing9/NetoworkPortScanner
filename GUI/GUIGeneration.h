@@ -8,11 +8,9 @@ class GUIGeneration
     public:
         GUIGeneration();
 
-        void genTrackingWindow(int windowWidth, int windowHeight);
+        bool genTrackingWindow(int windowWidth, int windowHeight);
 
         void genanotherWindow();
-
-        void genanotherWindow(float x, float x1, float x2, float x3, GLFWwindow* window);
 
         void generateTable();
 };

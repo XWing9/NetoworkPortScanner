@@ -8,6 +8,8 @@ class CoreManager {
         CoreManager();
         std::string getStatusText() const;
 
+        void onStartTrackingPressed();
+
     private:
         std::string statusText;
 };

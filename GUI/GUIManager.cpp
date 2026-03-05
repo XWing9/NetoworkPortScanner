@@ -1,13 +1,12 @@
 #include "GUIManager.h"
 #include "../imGUI/backend/imgui_impl_glfw.h"
 #include "../imGUI/backend/imgui_impl_opengl3.h"
+#include "../imGUI/frontend/imgui.h"
 #include <iostream>
 #include <GL/gl.h>
 
 #include "imgui_internal.h"
-
-int windowWidth = 1280;
-int windowHeight = 720;
+#include "../appConfig.h"
 
 GUIManager::GUIManager() : window(nullptr) {
     clearColor[0] = 0.2f;
@@ -63,9 +62,15 @@ void GUIManager::render() {
     }
 
     ImGui::Separator();
+
+    ImGui::Text("%s",coreManager.getStatusText().c_str());
     ImGui::End();  // Close the original window
 
-    GUIGen.genTrackingWindow(windowWidth,windowHeight);
+    if (GUIGen.genTrackingWindow(
+        appConfig::windowSizes::windowWidth,
+        appConfig::windowSizes::windowHeight)){
+        coreManager.onStartTrackingPressed();
+    }
     GUIGen.generateTable();
 }
 

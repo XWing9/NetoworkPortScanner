@@ -1,14 +1,9 @@
 #include <iostream>
 #include <GLFW/glfw3.h>
 #include "GUI/GUIManager.h"
-
-extern int windowWidth;
-extern int windowHeight;
+#include "appConfig.h"
 
 int main(){
-
-    int windowW = windowWidth;
-    int windowH = windowHeight;
 
     // 1. Initialize GLFW
     if (!glfwInit())
@@ -22,7 +17,13 @@ int main(){
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(1280, 720, "Network Port Scanner", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(
+        appConfig::windowSizes::windowWidth,
+        appConfig::windowSizes::windowHeight,
+        "Network Port Scanner",
+        nullptr,
+        nullptr
+    );
 
     if (!window)
     {
@@ -44,7 +45,6 @@ int main(){
     }
 
     // 4. Main Loop
-
     double lastFrameTime = glfwGetTime();
 
     while (!glfwWindowShouldClose(window))

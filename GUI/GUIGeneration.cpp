@@ -8,9 +8,9 @@ GUIGeneration::GUIGeneration(){
     return;
 }
 
-void GUIGeneration::genTrackingWindow(int windowWidth,int windowHeight){
+bool GUIGeneration::genTrackingWindow(int windowWidth,int windowHeight){
     ImGui::SetNextWindowPos(ImVec2(0, 0));
-    ImGui::SetNextWindowSize(ImVec2(windowWidth, 100));
+    ImGui::SetNextWindowSize(ImVec2(windowWidth * 0.5, 100));
 
     ImGuiWindowFlags flags =
         ImGuiWindowFlags_NoMove        |  // Can't be dragged
@@ -18,16 +18,13 @@ void GUIGeneration::genTrackingWindow(int windowWidth,int windowHeight){
         ImGuiWindowFlags_NoCollapse    |  // Can't be collapsed/hidden
         ImGuiWindowFlags_NoTitleBar;  // Removes title bar entirely
 
-    ImGui::Begin("Tracking Window",nullptr,flags);  // New window with the name "Tracking"
+    ImGui::Begin("Tracking Window",nullptr,flags);
+    bool trackingClicked = ImGui::Button("Start tracking");
     ImGui::Text("window");
     ImGui::End();
-};
 
-void GUIGeneration::genanotherWindow(float color1, float color2, float color3, float color4, GLFWwindow* window){
-    ImGui::Begin("Welcome");
-    ImGui::Text("Network Port Scanner is running!");
-    ImGui::Separator();
-}
+    return trackingClicked;
+};
 
 void GUIGeneration::generateTable()
 {
