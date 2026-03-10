@@ -5,6 +5,8 @@ namespace appConfig{
     namespace windowSizes{
         inline constexpr int windowWidth = 1280;
         inline constexpr int windowHeight = 720;
+        inline constexpr int halfWindowWidthSize = windowWidth / 2;
+        inline constexpr int halfWindowHeightSize = windowHeight / 2;
     }
 
     namespace windowLabels{

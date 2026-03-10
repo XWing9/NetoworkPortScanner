@@ -8,9 +8,9 @@ GUIGeneration::GUIGeneration(){
     return;
 }
 
-bool GUIGeneration::genTrackingWindow(int windowWidth,int windowHeight){
+bool GUIGeneration::genTrackingWindow(int halfWindowWidthSize,int windowHeight){
     ImGui::SetNextWindowPos(ImVec2(0, 0));
-    ImGui::SetNextWindowSize(ImVec2(windowWidth * 0.5, 100));
+    ImGui::SetNextWindowSize(ImVec2(halfWindowWidthSize, windowHeight));
 
     ImGuiWindowFlags flags =
         ImGuiWindowFlags_NoMove        |  // Can't be dragged
@@ -24,20 +24,24 @@ bool GUIGeneration::genTrackingWindow(int windowWidth,int windowHeight){
     ImGui::End();
 
     return trackingClicked;
-};
+}
 
-void GUIGeneration::generateTable()
-{
-    if (ImGui::BeginTable("test Table",2))
-    {
-        ImGui::TableNextRow();
+void GUIGeneration::genTrackingCharts(int halfWindowWidthSize,int halfWindowHeightSize){
+    ImGui::SetNextWindowPos(ImVec2(halfWindowWidthSize, 0));
+    ImGui::SetNextWindowSize(ImVec2(halfWindowWidthSize, halfWindowHeightSize));
 
-        ImGui::TableSetColumnIndex(0);
-        ImGui::Text("Name");
+    //der name in der methode is piepe, die referenz zum orginall zählt
+    // er muss aber trotzdem denn name in der methode nutzen um es zu suchen
+    //würde er es anstatt bestellung papier nennen wurde er papier. etc ....
+    //suchen
+    ImGuiWindowFlags flags =
+        ImGuiWindowFlags_NoMove        |  // Can't be dragged
+        ImGuiWindowFlags_NoResize      |  // Can't be resized
+        ImGuiWindowFlags_NoCollapse    |  // Can't be collapsed/hidden
+        ImGuiWindowFlags_NoTitleBar;  // Removes title bar entirely
 
-        ImGui::TableSetColumnIndex(1);
-        ImGui::InputText("##name","test", 64);
 
-        ImGui::EndTable();
-    }
+    ImGui::Begin("Charts Window",nullptr,flags);
+    ImGui::Text("Tracking Charts");
+    ImGui::End();
 }

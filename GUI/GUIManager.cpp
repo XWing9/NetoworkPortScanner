@@ -49,7 +49,10 @@ void GUIManager::newFrame() {
 //main part where GUI is defined
 void GUIManager::render() {
     // Main window
-    ImGui::Begin("Welcome");
+    ImGui::SetNextWindowPos(ImVec2(
+        appConfig::windowSizes::halfWindowWidthSize,
+        appConfig::windowSizes::halfWindowHeightSize));
+    ImGui::Begin("Welcome",nullptr);
     ImGui::Text("Network Port Scanner is running!");
     ImGui::Separator();
 
@@ -66,12 +69,16 @@ void GUIManager::render() {
     ImGui::Text("%s",coreManager.getStatusText().c_str());
     ImGui::End();  // Close the original window
 
+    GUIGen.genTrackingCharts(
+        appConfig::windowSizes::halfWindowWidthSize,
+        appConfig::windowSizes::halfWindowHeightSize
+    );
+
     if (GUIGen.genTrackingWindow(
-        appConfig::windowSizes::windowWidth,
+        appConfig::windowSizes::halfWindowWidthSize,
         appConfig::windowSizes::windowHeight)){
         coreManager.onStartTrackingPressed();
     }
-    GUIGen.generateTable();
 }
 
 void GUIManager::endFrame() {

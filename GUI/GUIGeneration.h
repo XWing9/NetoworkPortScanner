@@ -8,9 +8,9 @@ class GUIGeneration
     public:
         GUIGeneration();
 
-        bool genTrackingWindow(int windowWidth, int windowHeight);
+        static bool genTrackingWindow(int windowWidth, int windowHeight);
 
-        void genanotherWindow();
+        void static genTrackingCharts(int halfWindowWidthSize, int halfWindowHeightSize);
 
         void generateTable();
 };

@@ -32,7 +32,7 @@ int main(){
         return 1;
     }
     glfwMakeContextCurrent(window);
-    glfwSwapInterval(0); // Enable VSync
+    glfwSwapInterval(1); // Enable VSync
 
     // 3. Create and initialize GUIManager
     GUIManager guiManager;
