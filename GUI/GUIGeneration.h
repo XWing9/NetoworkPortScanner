@@ -10,6 +10,8 @@ class GUIGeneration
 
         static bool genTrackingWindow(int windowWidth, int windowHeight);
 
+        static void genOpenPortTable();
+
         void static genTrackingCharts(int halfWindowWidthSize, int halfWindowHeightSize);
 
         void generateTable();

@@ -33,6 +33,9 @@ bool GUIManager::initialize(GLFWwindow* win) {
     ImGuiIO& io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 
+    //increase globall font size
+    io.FontGlobalScale = 2;
+
     // Setup backends
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 130");
@@ -56,8 +59,6 @@ void GUIManager::render() {
     ImGui::Text("Network Port Scanner is running!");
     ImGui::Separator();
 
-    //GUIGen.genanotherWindow(clearColor[0], clearColor[1], clearColor[2], clearColor[3],window);
-
     ImGui::ColorEdit4("Clear Color", clearColor);
 
     if (ImGui::Button("Quit")) {
@@ -67,7 +68,7 @@ void GUIManager::render() {
     ImGui::Separator();
 
     ImGui::Text("%s",coreManager.getStatusText().c_str());
-    ImGui::End();  // Close the original window
+    ImGui::End();
 
     GUIGen.genTrackingCharts(
         appConfig::windowSizes::halfWindowWidthSize,

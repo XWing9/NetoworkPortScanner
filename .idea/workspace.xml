@@ -66,7 +66,6 @@
       <change beforePath="$PROJECT_DIR$/GUI/GUIGeneration.h" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIGeneration.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/GUIManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/appConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,11 +136,6 @@
 }</component>
   <component name="RunManager" selected="CMake Application.NetworkPortScanner">
     <configuration name="NetworkPortScanner" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="NetworkPortScanner" TARGET_NAME="NetworkPortScanner" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="NetworkPortScanner" RUN_TARGET_NAME="NetworkPortScanner">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -361,7 +355,8 @@
       <workItem from="1772384688248" duration="3221000" />
       <workItem from="1772529279200" duration="1984000" />
       <workItem from="1772727255854" duration="7406000" />
-      <workItem from="1773134194739" duration="3482000" />
+      <workItem from="1773134194739" duration="3619000" />
+      <workItem from="1773147369118" duration="3676000" />
     </task>
     <servers />
   </component>
