@@ -54,5 +54,11 @@ target_link_libraries(NetworkPortScanner PRIVATE
 
 # Use the native Win32 system libraries if needed
 if (WIN32)
-    target_link_libraries(NetworkPortScanner PRIVATE user32 gdi32 shell32)
+    target_link_libraries(NetworkPortScanner PRIVATE
+            user32
+            gdi32
+            shell32
+            ws2_32
+            iphlpapi
+    )
 endif()

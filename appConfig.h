@@ -5,7 +5,7 @@ namespace appConfig{
     namespace windowSizes{
         inline constexpr int windowWidth = 1500;
         inline constexpr int windowHeight = 950;
-        inline constexpr int halfWindowWidthSize = windowWidth / 2;
+        inline constexpr int halfWindowWidthSize = (windowWidth / 2) - 200;
         inline constexpr int halfWindowHeightSize = windowHeight / 2;
     }
 

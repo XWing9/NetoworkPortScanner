@@ -62,6 +62,9 @@
   <component name="ChangeListManager">
     <list default="true" id="52376b4c-bcb5-4f58-a7b4-c2f7e6ae0a0d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreLogic/CoreManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CoreLogic/CoreManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreLogic/CoreManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/CoreLogic/CoreManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/GUIGeneration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIGeneration.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/GUIGeneration.h" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIGeneration.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/GUIManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUIManager.cpp" afterDir="false" />
@@ -356,7 +359,10 @@
       <workItem from="1772529279200" duration="1984000" />
       <workItem from="1772727255854" duration="7406000" />
       <workItem from="1773134194739" duration="3619000" />
-      <workItem from="1773147369118" duration="3676000" />
+      <workItem from="1773147369118" duration="3698000" />
+      <workItem from="1773235203698" duration="1580000" />
+      <workItem from="1773661247995" duration="1722000" />
+      <workItem from="1773737702652" duration="4088000" />
     </task>
     <servers />
   </component>

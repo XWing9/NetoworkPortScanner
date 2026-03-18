@@ -72,7 +72,8 @@ void GUIManager::render() {
 
     GUIGen.genTrackingCharts(
         appConfig::windowSizes::halfWindowWidthSize,
-        appConfig::windowSizes::halfWindowHeightSize
+        appConfig::windowSizes::halfWindowHeightSize,
+        coreManager.getOpenPorts()
     );
 
     if (GUIGen.genTrackingWindow(

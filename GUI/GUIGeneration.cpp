@@ -31,9 +31,10 @@ bool GUIGeneration::genTrackingWindow(int halfWindowWidthSize,int windowHeight){
     return trackingClicked;
 }
 
-void GUIGeneration::genTrackingCharts(int halfWindowWidthSize,int halfWindowHeightSize){
+void GUIGeneration::genTrackingCharts(int halfWindowWidthSize,int halfWindowHeightSize,
+                                        const std::vector<PortInfo>& ports){
     ImGui::SetNextWindowPos(ImVec2(halfWindowWidthSize, 0));
-    ImGui::SetNextWindowSize(ImVec2(halfWindowWidthSize, halfWindowHeightSize));
+    ImGui::SetNextWindowSize(ImVec2(halfWindowWidthSize + 400, halfWindowHeightSize));
 
     ImGuiWindowFlags flags =
         ImGuiWindowFlags_NoMove        |  // Can't be dragged
@@ -46,32 +47,39 @@ void GUIGeneration::genTrackingCharts(int halfWindowWidthSize,int halfWindowHeig
     ImGui::Indent(100.0f);
     ImGui::Text("Open Ports:");
     ImGui::Unindent();
+    ImGui::Unindent();
     ImGui::Separator();
     ImGui::Spacing();
-    genOpenPortTable();
+    genOpenPortTable(ports);
     ImGui::End();
 }
 
-void GUIGeneration::genOpenPortTable(){
+void GUIGeneration::genOpenPortTable(const std::vector<PortInfo>& ports){
     struct PortInfo{ std::string portType;bool open;};
-    //tmp table filler ig
-    std::vector<PortInfo> ports = {
-        {"HTTP",true},
-        {"HTTPS",false}
-    };
 
-    if (ImGui::BeginTable("Ports", 2, ImGuiTableFlags_Borders | ImGuiTableFlags_Resizable))
+    if (ImGui::BeginTable("Ports", 4, ImGuiTableFlags_Borders | ImGuiTableFlags_Resizable))
     {
-        ImGui::TableSetupColumn("Port Type");
-        ImGui::TableSetupColumn("Open");
+        ImGui::TableSetupColumn("IP address");
+        ImGui::TableSetupColumn("Port");
+        ImGui::TableSetupColumn("Service");
+        ImGui::TableSetupColumn("Status");
         ImGui::TableHeadersRow();
 
-        for (auto& port : ports)
+        for (const auto& port : ports)
         {
             ImGui::TableNextRow();
 
-            ImGui::TableSetColumnIndex(0); ImGui::Text("%s", port.portType.c_str());
-            ImGui::TableSetColumnIndex(1); ImGui::Text("%s", port.open ? "Yes" : "No");
+            ImGui::TableSetColumnIndex(0);
+            ImGui::Text("%s", port.ip.c_str());
+
+            ImGui::TableSetColumnIndex(1);
+            ImGui::Text("%d", port.port);
+
+            ImGui::TableSetColumnIndex(2);
+            ImGui::Text("%s", port.service.c_str());
+
+            ImGui::TableSetColumnIndex(3);
+            ImGui::Text("%s", port.status.c_str());
         }
 
         ImGui::EndTable();
