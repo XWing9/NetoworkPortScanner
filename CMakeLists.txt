@@ -21,6 +21,9 @@ set(SOURCES
     GUI/GUIGeneration.cpp
     GUI/GUIGeneration.h
         appConfig.h
+        CoreLogic/networkScanLogic.cpp
+        CoreLogic/networkScanLogic.h
+        appState.h
 )
 
 # Fetch GLFW for window management (only external fetch allowed for backend compatibility)

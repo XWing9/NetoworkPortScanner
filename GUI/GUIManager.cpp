@@ -8,7 +8,7 @@
 #include "imgui_internal.h"
 #include "../appConfig.h"
 
-GUIManager::GUIManager() : window(nullptr) {
+GUIManager::GUIManager(AppState& state) : state(state), window(nullptr) {
     clearColor[0] = 0.2f;
     clearColor[1] = 0.3f;
     clearColor[2] = 0.3f;
@@ -67,19 +67,23 @@ void GUIManager::render() {
 
     ImGui::Separator();
 
-    ImGui::Text("%s",coreManager.getStatusText().c_str());
+    //ImGui::Text("%s",coreManager.getStatusText().c_str());
     ImGui::End();
 
-    GUIGen.genTrackingCharts(
-        appConfig::windowSizes::halfWindowWidthSize,
-        appConfig::windowSizes::halfWindowHeightSize,
-        coreManager.getOpenPorts()
-    );
+    {
+        // lock while we pass data to the table
+        std::lock_guard<std::mutex> lock(state.resultsMutex);
+        GUIGen.genTrackingCharts(
+            appConfig::windowSizes::halfWindowWidthSize,
+            appConfig::windowSizes::halfWindowHeightSize,
+            state.scanResults   // read directly from AppState
+        );
+    }
 
     if (GUIGen.genTrackingWindow(
         appConfig::windowSizes::halfWindowWidthSize,
         appConfig::windowSizes::windowHeight)){
-        coreManager.onStartTrackingPressed();
+        state.pushEvent(UIEvent::startScan);  // just fires the event
     }
 }
 

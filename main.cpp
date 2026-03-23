@@ -1,7 +1,9 @@
 #include <iostream>
 #include <GLFW/glfw3.h>
+
 #include "GUI/GUIManager.h"
 #include "appConfig.h"
+#include "appState.h"
 
 int main(){
 
@@ -34,8 +36,13 @@ int main(){
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1); // Enable VSync
 
-    // 3. Create and initialize GUIManager
-    GUIManager guiManager;
+    // 3. Create and initialize stuff
+
+    AppState state;
+
+    CoreManager coreManager(state);
+    GUIManager guiManager(state);
+
     if (!guiManager.initialize(window))
     {
         std::cerr << "Failed to initialize GUIManager" << std::endl;

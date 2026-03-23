@@ -3,30 +3,28 @@
 
 #include "../imGUI/frontend/imgui.h"
 #include "../CoreLogic/CoreManager.h"
-#include "../GUI\GUIGeneration.h"
 #include <GLFW/glfw3.h>
+
+#include "../GUI\GUIGeneration.h"
+#include "../appState.h"
 
 class GUIManager {
 public:
-    GUIManager();
+    GUIManager(AppState& state);
     ~GUIManager();
 
     bool initialize(GLFWwindow* window);
-
     void newFrame();
-
     void render();
-
     void endFrame();
-
     void shutdown();
 
 private:
+    AppState& state;
+
     GLFWwindow* window;
     float clearColor[4];
 
-
-    CoreManager coreManager;
     GUIGeneration GUIGen;
     bool showLabel = false;
 };

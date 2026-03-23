@@ -1,11 +1,9 @@
 #ifndef NETWORKPORTSCANNER_GUIGENERATION_H
 #define NETWORKPORTSCANNER_GUIGENERATION_H
-#include "imgui_impl_glfw.h"
-#include "GLFW/glfw3.h"
-#include <vector>
 
-//change to give dynamiccly from GUIManager class not like this
-#include "../CoreLogic/CoreManager.h"
+#pragma once
+#include "../appState.h"
+#include <vector>
 
 class GUIGeneration
 {
@@ -14,11 +12,12 @@ class GUIGeneration
 
         static bool genTrackingWindow(int windowWidth, int windowHeight);
 
-        static void genOpenPortTable(const std::vector<PortInfo>& ports);
-
-        void static genTrackingCharts(int halfWindowWidthSize, int halfWindowHeightSize,const std::vector<PortInfo>& ports);
+        void genTrackingCharts(int halfWindowWidthSize, int halfWindowHeightSize,
+                                        const std::vector<ScanResult>& ports);
 
         void generateTable();
+    private:
+        void genOpenPortTable(const std::vector<ScanResult>& ports);
 };
 
 #endif //NETWORKPORTSCANNER_GUIGENERATION_H

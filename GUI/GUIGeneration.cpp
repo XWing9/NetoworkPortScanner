@@ -2,9 +2,7 @@
 
 #include <string>
 #include <vector>
-#include "../imGUI/backend/imgui_impl_glfw.h"
 #include "../imGUI/backend/imgui_impl_opengl3.h"
-#include <GL/gl.h>
 
 //constructor
 GUIGeneration::GUIGeneration(){
@@ -24,15 +22,16 @@ bool GUIGeneration::genTrackingWindow(int halfWindowWidthSize,int windowHeight){
     ImGui::Begin("Tracking Window",nullptr,flags);
     ImGui::Dummy(ImVec2(0, 20));
     ImGui::Indent();
-    bool trackingClicked = ImGui::Button("Start tracking");
-    ImGui::Text("window");
+    bool networkPortTrackingClicked = ImGui::Button("Track Network Ports");
+    ImGui::Spacing();
+    bool portTrackingClicked = ImGui::Button("Track own Ports");
     ImGui::End();
 
-    return trackingClicked;
+    return networkPortTrackingClicked;
 }
 
 void GUIGeneration::genTrackingCharts(int halfWindowWidthSize,int halfWindowHeightSize,
-                                        const std::vector<PortInfo>& ports){
+                                        const std::vector<ScanResult>& ports){
     ImGui::SetNextWindowPos(ImVec2(halfWindowWidthSize, 0));
     ImGui::SetNextWindowSize(ImVec2(halfWindowWidthSize + 400, halfWindowHeightSize));
 
@@ -54,11 +53,10 @@ void GUIGeneration::genTrackingCharts(int halfWindowWidthSize,int halfWindowHeig
     ImGui::End();
 }
 
-void GUIGeneration::genOpenPortTable(const std::vector<PortInfo>& ports){
+void GUIGeneration::genOpenPortTable(const std::vector<ScanResult>& ports){
     struct PortInfo{ std::string portType;bool open;};
 
-    if (ImGui::BeginTable("Ports", 4, ImGuiTableFlags_Borders | ImGuiTableFlags_Resizable))
-    {
+    if (ImGui::BeginTable("Ports", 4, ImGuiTableFlags_Borders | ImGuiTableFlags_Resizable)){
         ImGui::TableSetupColumn("IP address");
         ImGui::TableSetupColumn("Port");
         ImGui::TableSetupColumn("Service");
@@ -83,4 +81,5 @@ void GUIGeneration::genOpenPortTable(const std::vector<PortInfo>& ports){
         }
 
         ImGui::EndTable();
-    }}
+    }
+}

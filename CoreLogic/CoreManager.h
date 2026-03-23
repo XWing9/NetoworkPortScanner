@@ -1,33 +1,21 @@
 #ifndef COREMANAGER_H
 #define COREMANAGER_H
 
-#include <string>
-#include <vector>
-#include <map>
-
-struct PortInfo {
-    std::string ip;
-    std::string service;
-    std::string status;
-    int port;
-};
+#include "../appState.h"
+#include "networkScanLogic.h"
 
 class CoreManager {
     public:
-        CoreManager();
-        std::string getStatusText() const;
+        CoreManager(AppState& state);
 
-        void onStartTrackingPressed();
-
-        //network etection
-        std::string getLocalIP();
-        void scanNetwork();
-        const std::vector<PortInfo>& getOpenPorts() const;
+        //called every frame from main loop to check event que?
+        //why i have no fucking idea
+        void update();
 
     private:
-        std::string statusText;
+        AppState& state;
 
-        std::vector<PortInfo> openPorts;
+        NetworkScanLogic networkScanner; // why i do void here?
 };
 
 #endif // COREMANAGER_H
